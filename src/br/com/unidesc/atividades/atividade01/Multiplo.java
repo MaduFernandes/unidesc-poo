@@ -1,4 +1,4 @@
-package br.com.unidesc;
+package br.com.unidesc.atividades.atividade01;
 
 public class Multiplo {
 
