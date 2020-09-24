@@ -1,8 +1,6 @@
 package br.com.unidesc.atividades.atividade02;
 
-import br.com.unidesc.atividades.atividade02.Controllers.AlunoController;
-
-public class Aluno extends AlunoController {
+public class Aluno {
 
     private String nome;
     private String cpf;
