@@ -38,11 +38,11 @@ public class Aluno {
         this.cpf = cpf;
     }
 
-    public String getMatricula() {
-        return this.matricula;
-    }
-
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public String getMatricula() {
+        return matricula;
     }
 }
