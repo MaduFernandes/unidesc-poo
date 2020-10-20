@@ -30,23 +30,28 @@ public class AlunoController implements IAluno {
 
     public void findAll() {
         alunos.forEach(aluno -> System.out.println("Aluno: " + aluno.getNome() + " \nCPF: " + aluno.getCpf() +
-                " \ncurso: " + aluno.getCurso()));
+                " \nCurso: " + aluno.getCurso()));
     }
 
-/*    public void update(Aluno aluno) {
-        novoAluno.setNome("Odilon");
-        alunos.add(novoAluno);
-        System.out.println(novoAluno);
+    public void update() {
+
+        if (alunos.isEmpty()) {
+            System.out.println("Não existe aluno para atualizar");
+        } else {
+            novoAluno.setNome("Odilon Garcez");
+            alunos.add(novoAluno);
+            System.out.println("Aluno atualizado!!!!");
+        }
     }
 
-    public void destroy(Aluno aluno) {
+    public void destroy() {
         if (alunos.isEmpty()) {
             System.out.println("Não é possível deletar um registro");
         } else {
-            alunos.remove(aluno);
+            alunos.remove(alunos);
             System.out.println("Aluno excluido com sucesso!!");
         }
-    }*/
+    }
 
 
     public Aluno geradorMatricula() {
@@ -59,7 +64,7 @@ public class AlunoController implements IAluno {
             semestre = 2;
         }
 
-        System.out.println(dataFormatada.format(data.getTime()) + "-" + valorRandomico.nextInt(99) + "-" + semestre);
+        System.out.println("Matricula " + dataFormatada.format(data.getTime()) + "-" + valorRandomico.nextInt(99) + "-" + semestre);
         return null;
     }
 

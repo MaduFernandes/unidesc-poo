@@ -42,7 +42,7 @@ public class Aluno {
         this.matricula = matricula;
     }
 
-    public String getMatricula() {
+    public String getMatricula(Aluno aluno) {
         return matricula;
     }
 }
