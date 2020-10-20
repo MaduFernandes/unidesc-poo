@@ -9,9 +9,6 @@ import br.com.unidesc.atividades.atividade02.Aluno;
 import br.com.unidesc.atividades.atividade02.Interfaces.IAluno;
 
 public class AlunoController implements IAluno {
-    // Fazer uma injeção de depedencia do AlunoService
-
-    // Colocar o meu Array aluno dentro do AlunoService
 
     ArrayList<Aluno> alunos = new ArrayList<>();
 
@@ -27,16 +24,16 @@ public class AlunoController implements IAluno {
         novoAluno.setNome("Maria Eduarda");
         novoAluno.setCpf("123456987-40");
         novoAluno.setCurso("Sistemas de Informação");
-        novoAluno = geradorMatricula();
+        novoAluno.getMatricula(geradorMatricula());
         alunos.add(novoAluno);
     }
 
     public void findAll() {
-        alunos.forEach(aluno -> System.out.println("Aluno: " + aluno.getNome() + " \ncpf: " + aluno.getCpf() +
+        alunos.forEach(aluno -> System.out.println("Aluno: " + aluno.getNome() + " \nCPF: " + aluno.getCpf() +
                 " \ncurso: " + aluno.getCurso()));
     }
 
-    public void update(Aluno aluno) {
+/*    public void update(Aluno aluno) {
         novoAluno.setNome("Odilon");
         alunos.add(novoAluno);
         System.out.println(novoAluno);
@@ -49,7 +46,7 @@ public class AlunoController implements IAluno {
             alunos.remove(aluno);
             System.out.println("Aluno excluido com sucesso!!");
         }
-    }
+    }*/
 
 
     public Aluno geradorMatricula() {
