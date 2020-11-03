@@ -1,5 +1,9 @@
 package br.com.unidesc.atividades.atividade02.Controllers;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -19,6 +23,20 @@ public class AlunoController implements IAluno {
     public AlunoController() {
 
     }
+    public void createFile() {
+        try {
+            File arquivo = new File("aluno.csv");
+            arquivo.createNewFile();
+            FileWriter fileWriter = new FileWriter(arquivo);
+            BufferedWriter implementaConteudo = new BufferedWriter(fileWriter);
+            implementaConteudo.write("Aluna: Maria Eduarda\n" + "CPF: 123456987-40\n" + "Curso: Sistemas de Informação");
+            implementaConteudo.close();
+            fileWriter.close();
+        } catch (IOException ex) {
+
+        }
+    }
+
 
     public void create() {
         novoAluno.setNome("Maria Eduarda");

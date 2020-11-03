@@ -12,6 +12,7 @@ public class Main {
         novoAluno.findAll();
         novoAluno.update();
         novoAluno.destroy();
+        novoAluno.createFile();
 
     }
 }
